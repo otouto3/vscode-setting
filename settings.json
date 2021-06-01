@@ -1,0 +1,80 @@
+{
+    //vimのyankとCommand + C, Command + Vを同じものとして扱う
+    "vim.useSystemClipboard": true,
+    //相対的な行数を表示する
+    //"editor.lineNumbers": "relative",
+    //jjでノーマルモードに入る
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            //"after": ["<ESC>",":","w","Enter"]
+            "after": [
+                "<ESC>"
+            ]
+        }
+    ],
+    //行末、行間をスムーズに移動する
+    "vim.whichwrap": "h,l,<,>,[,]",
+    //行末の余分なスペースを消す
+    "files.trimTrailingWhitespace": true,
+    //tabかスペースかの適切な表示
+    "editor.renderWhitespace": "all",
+    // //日本語に対応した単語単位の移動に対する適切な区切り
+    // //完全なものではないらしい
+    // "vim.normalModeKeyBindingsNonRecursive": [
+    //     {
+    //         "before": [
+    //             "w"
+    //         ],
+    //         "commands": [
+    //             "extension.cursorNextWordEndJa"
+    //         ]
+    //     },
+    //     {
+    //         "before": [
+    //             "e"
+    //         ],
+    //         "commands": [
+    //             "extension.cursorNextWordEndJa"
+    //         ]
+    //     },
+    //     {
+    //         "before": [
+    //             "b"
+    //         ],
+    //         "commands": [
+    //             "extension.cursorPrevWordStartJa"
+    //         ]
+    //     }
+    // ],
+    //検索結果をハイライトする
+    "vim.hlsearch": true,
+    //*や#キーでカーソル配下の文字列を検索する
+    "vim.visualstar": true,
+    //改行コードの設定
+    "files.eol": "\n",
+    //ファイルを開く時の推測変換をONにする
+    "files.autoGuessEncoding": true,
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 2,
+    "terminal.integrated.rendererType": "dom",
+    // フォント指定
+    "editor.fontWeight": "bold",
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.inheritEnv": false,
+    "git.autofetch": true,
+    //pythonはpyenvを使う
+    "python.pythonPath": "/Users/otouto/.pyenv/shims/python",
+    //codeingの設定
+    //https://qiita.com/psychoroid/items/2c2acc06c900d2c0c8cb
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.formatting.provider": autopep8,
+    "editor.formatOnSave": true,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+}
+
