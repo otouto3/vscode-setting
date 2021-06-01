@@ -1,0 +1,59 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Editor 内移動
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor"
+    },
+    // Panel と Editor 間の移動
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+
+    //補完の時の移動 競合するキーバインドを無効化
+    {
+        "key": "ctrl+space",
+        "command": "-toggleSuggestionDetails",
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+
+    //tabでカーソルを1つ下の候補に移動させる
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+
+    //Ctrl+fでカーソルを1つ上の候補に移動させる
+    {
+        "key": "ctrl+f",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+
+    //エディタ→サイドバー
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorTextFocus"
+      },
+
+    //	サイドバー→エディタ
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "filesExplorerFocus"
+    },
+]
+
